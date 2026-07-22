@@ -498,7 +498,20 @@
     </div>
 
     <div class="project-card" data-cat="research">
-      <div class="card-carousel" style="display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:0.12em;padding:6px 14px;border-radius:100px;border:0.5px solid var(--border);background:var(--bg2);color:var(--text2);font-family:'DM Mono',monospace;">PAPER</span></div>
+      <div class="card-carousel" id="carousel-research">
+        <img src="assets/research-before.png" alt="Before PD correction">
+        <img src="assets/research-after.png" alt="After PD correction">
+        <img src="assets/research-solution.png" alt="Particular solution plot">
+        <img src="assets/research-verification.png" alt="Verification plot">
+        <img src="assets/research-neural-ode.png" alt="Neural ODE vs analytical solution">
+        <div class="carousel-dots">
+          <div class="carousel-dot active"></div>
+          <div class="carousel-dot"></div>
+          <div class="carousel-dot"></div>
+          <div class="carousel-dot"></div>
+          <div class="carousel-dot"></div>
+        </div>
+      </div>
       <div class="card-body">
         <div class="card-tag-row">
           <span class="card-tag tag-stanford">RESEARCH</span>
@@ -506,9 +519,9 @@
             <button class="btn btn-outline" style="font-size:11px;padding:4px 10px;margin-left:auto;">Read Paper</button>
           </a>
         </div>
-        <div class="card-title">Differential Equations: Line-Following Car PD Control</div>
-        <div class="card-desc">Math 2A research paper deriving a differential equation model of PD controller behavior in a line-following car, then training a neural ODE on the data that matched the derived equation's correcting behavior.</div>
-        <div class="card-tech"><span class="tech-pill">MATLAB</span><span class="tech-pill">Differential Equations</span><span class="tech-pill">PD Controllers</span><span class="tech-pill">Neural ODE</span><span class="tech-pill">Visual Studio</span></div>
+        <div class="card-title">Modeling Lateral Error Correction in a Line-Following Robot Using Second-Order ODEs and Neural ODEs</div>
+        <div class="card-desc">Derived and solved a constant-coefficient second-order linear homogeneous ODE modeling how a line-following robot corrects its position under Proportional-Derivative control, combining Newton's second law with PD control theory. Using the characteristic equation method, solved the resulting initial value problem for a closed-form solution and showed how the controller's proportional and derivative gains determine whether the correction is underdamped, critically damped, or overdamped. Verified the analytical prediction against a numerical solution in MATLAB, then built a Neural ODE in Python/PyTorch.</div>
+        <div class="card-tech"><span class="tech-pill">Differential Equations</span><span class="tech-pill">Control Theory</span><span class="tech-pill">MATLAB</span><span class="tech-pill">Python</span><span class="tech-pill">PyTorch</span><span class="tech-pill">Neural Networks</span><span class="tech-pill">Mathematical Modeling</span></div>
       </div>
     </div>
   </div>
@@ -888,6 +901,7 @@ function initCarousel(id) {
 
 initCarousel('carousel-stanford');
 initCarousel('carousel-stanford-p');
+initCarousel('carousel-research');
 </script>
 </body>
 </html
